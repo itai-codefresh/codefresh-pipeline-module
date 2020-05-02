@@ -1,0 +1,255 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "default": {},
+  "additionalProperties": true,
+  "required": [
+    "oc",
+    "git",
+    "docker",
+    "helm"
+  ],
+  "properties": {
+    "oc": {
+      "$id": "#/properties/oc",
+      "type": "object",
+      "title": "The Oc Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "namespace": null,
+          "cluster": null
+        }
+      ],
+      "additionalProperties": true,
+      "required": [
+        "cluster",
+        "namespace"
+      ],
+      "properties": {
+        "cluster": {
+          "$id": "#/properties/oc/properties/cluster",
+          "type": "null",
+          "title": "The Cluster Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "namespace": {
+          "$id": "#/properties/oc/properties/namespace",
+          "type": "null",
+          "title": "The Namespace Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        }
+      }
+    },
+    "git": {
+      "$id": "#/properties/git",
+      "type": "object",
+      "title": "The Git Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "main": {
+            "repo": null,
+            "revision": null,
+            "provider": null
+          }
+        }
+      ],
+      "additionalProperties": true,
+      "required": [
+        "main"
+      ],
+      "properties": {
+        "main": {
+          "$id": "#/properties/git/properties/main",
+          "type": "object",
+          "title": "The Main Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "repo": null,
+              "revision": null,
+              "provider": null
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "repo",
+            "revision",
+            "provider"
+          ],
+          "properties": {
+            "repo": {
+              "$id": "#/properties/git/properties/main/properties/repo",
+              "type": "null",
+              "title": "The Repo Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": null,
+              "examples": [
+                null
+              ]
+            },
+            "revision": {
+              "$id": "#/properties/git/properties/main/properties/revision",
+              "type": "null",
+              "title": "The Revision Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": null,
+              "examples": [
+                null
+              ]
+            },
+            "provider": {
+              "$id": "#/properties/git/properties/main/properties/provider",
+              "type": "null",
+              "title": "The Provider Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": null,
+              "examples": [
+                null
+              ]
+            }
+          }
+        }
+      }
+    },
+    "docker": {
+      "$id": "#/properties/docker",
+      "type": "object",
+      "title": "The Docker Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "imageName": null,
+          "tag": null,
+          "file": null,
+          "registry": null
+        }
+      ],
+      "additionalProperties": true,
+      "required": [
+        "imageName",
+        "tag",
+        "file",
+        "registry"
+      ],
+      "properties": {
+        "imageName": {
+          "$id": "#/properties/docker/properties/imageName",
+          "type": "null",
+          "title": "The Imagename Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "tag": {
+          "$id": "#/properties/docker/properties/tag",
+          "type": "null",
+          "title": "The Tag Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "file": {
+          "$id": "#/properties/docker/properties/file",
+          "type": "null",
+          "title": "The File Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "registry": {
+          "$id": "#/properties/docker/properties/registry",
+          "type": "null",
+          "title": "The Registry Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        }
+      }
+    },
+    "helm": {
+      "$id": "#/properties/helm",
+      "type": "object",
+      "title": "The Helm Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "chart": {
+            "dir": null,
+            "name": null
+          }
+        }
+      ],
+      "additionalProperties": true,
+      "required": [
+        "chart"
+      ],
+      "properties": {
+        "chart": {
+          "$id": "#/properties/helm/properties/chart",
+          "type": "object",
+          "title": "The Chart Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "dir": null,
+              "name": null
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "name",
+            "dir"
+          ],
+          "properties": {
+            "name": {
+              "$id": "#/properties/helm/properties/chart/properties/name",
+              "type": "null",
+              "title": "The Name Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": null,
+              "examples": [
+                null
+              ]
+            },
+            "dir": {
+              "$id": "#/properties/helm/properties/chart/properties/dir",
+              "type": "null",
+              "title": "The Dir Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": null,
+              "examples": [
+                null
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

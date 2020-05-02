@@ -1,0 +1,12 @@
+{{- define "deploy.steps" }}
+  install_helm_chart:
+    title: Installing {{ .Variables.helm.chart.name }} Helm chart...
+    type: helm
+    stage: deploy
+    arguments:
+      action: install
+      chart_name: {{ .Variables.helm.chart.name }}
+      helm_version: {{ .Variables.helm.chart.version }}
+      kube_context: {{ .Variables.oc.cluster }}
+      namespace: {{ .Variables.oc.namespace }}
+{{end}}

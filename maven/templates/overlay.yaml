@@ -1,0 +1,20 @@
+overlay: '1.0'
+updates:
+  - type: step
+    name: clone_main_repo
+    operation: merge
+    data:
+      clone_main_repo:
+        commands:
+          - echo " merged step"
+  - type: step
+    name: clone_main_repo
+    operation: prepend
+    data:
+      clone_secondary_repo:
+        title: Cloning {{ .Variables.git.auxiliary.repo }} repository...
+        stage: setup
+        type: git-clone
+        repo: {{ .Variables.git.auxiliary.repo }}
+        revision: {{ .Variables.git.auxiliary.revision }}
+        git: {{ .Variables.git.auxiliary.provider }}

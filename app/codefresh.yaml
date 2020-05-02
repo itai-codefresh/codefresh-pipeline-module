@@ -1,0 +1,7 @@
+cf-module: '1.0'
+name: codefresh/app
+version: 0.1.0
+description: Codefresh app pipeline
+dependencies:
+  - name: codefresh/maven
+    version: 0.1.0

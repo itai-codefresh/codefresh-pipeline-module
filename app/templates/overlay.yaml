@@ -1,0 +1,15 @@
+overlay: '1.0'
+updates:
+  - type: stage
+    name: deploy
+    operation: append
+    data:
+      - validate
+  - type: step
+    name: install_helm_chart
+    operation: append
+    data:
+      acceptance_test:
+        title: Acceptance testing...
+        stage: validate
+        type: gauge

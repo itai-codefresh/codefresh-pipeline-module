@@ -1,0 +1,4 @@
+module: '1.0'
+name: codefresh/base
+version: 0.1.0
+description: Codefresh base pipeline

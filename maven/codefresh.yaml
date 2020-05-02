@@ -1,0 +1,7 @@
+module: '1.0'
+name: codefresh/maven
+version: 0.1.0
+description: Codefresh maven pipeline
+dependencies:
+  - name: codefresh/base
+    version: 0.1.0

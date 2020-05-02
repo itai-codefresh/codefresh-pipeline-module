@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "default": {},
+  "additionalProperties": true,
+  "required": [
+    "git",
+    "mvn"
+  ],
+  "properties": {
+    "git": {
+      "$id": "#/properties/git",
+      "type": "object",
+      "title": "The Git Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "auxiliary": {
+            "repo": null,
+            "revision": null,
+            "provider": null
+          }
+        }
+      ],
+      "additionalProperties": true,
+      "required": [
+        "auxiliary"
+      ],
+      "properties": {
+        "auxiliary": {
+          "$id": "#/properties/git/properties/auxiliary",
+          "type": "object",
+          "title": "The Auxiliary Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "repo": null,
+              "revision": null,
+              "provider": null
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "repo",
+            "revision",
+            "provider"
+          ],
+          "properties": {
+            "repo": {
+              "$id": "#/properties/git/properties/auxiliary/properties/repo",
+              "type": "null",
+              "title": "The Repo Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": null,
+              "examples": [
+                null
+              ]
+            },
+            "revision": {
+              "$id": "#/properties/git/properties/auxiliary/properties/revision",
+              "type": "null",
+              "title": "The Revision Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": null,
+              "examples": [
+                null
+              ]
+            },
+            "provider": {
+              "$id": "#/properties/git/properties/auxiliary/properties/provider",
+              "type": "null",
+              "title": "The Provider Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": null,
+              "examples": [
+                null
+              ]
+            }
+          }
+        }
+      }
+    },
+    "mvn": {
+      "$id": "#/properties/mvn",
+      "type": "object",
+      "title": "The Mvn Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "image": "maven:3.5.2-jdk-8-alpine"
+        }
+      ],
+      "additionalProperties": true,
+      "required": [
+        "image"
+      ],
+      "properties": {
+        "image": {
+          "$id": "#/properties/mvn/properties/image",
+          "type": "string",
+          "title": "The Image Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "maven:3.5.2-jdk-8-alpine"
+          ]
+        }
+      }
+    }
+  }
+}

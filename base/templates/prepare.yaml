@@ -1,0 +1,9 @@
+{{- define "prepare.steps" }}
+  clone_main_repo:
+    title: Cloning {{ .Variables.git.main.repo }} repository...
+    stage: setup
+    type: git-clone
+    repo: {{ .Variables.git.main.repo }}
+    revision: {{ .Variables.git.main.revision }}
+    git: {{ .Variables.git.main.provider }}
+{{end}}

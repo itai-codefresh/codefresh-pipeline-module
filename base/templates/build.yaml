@@ -1,0 +1,23 @@
+{{- define "build.steps" }}
+  build_docker_image:
+    title: Building {{ .Variables.docker.imageName }} Docker image...
+    type: build
+    stage: build
+    image_name: {{ .Variables.docker.imageName }}
+    tag: {{ .Variables.docker.tag }}
+    dockerfile: {{ .Variables.docker.file }}
+  publish_docker_image:
+    title: Publishing {{ .Variables.docker.imageName }} Docker image...
+    type: push
+    stage: build
+    image_name: {{ .Variables.docker.imageName }}
+    tag: {{ .Variables.docker.tag }}
+    registry: {{ .Variables.docker.registry }}
+  publish_helm_chart:
+      title: Publishing {{ .Variables.helm.chart.name }} Helm chart...
+      type: helm
+      stage: build
+      arguments:
+          action: push
+          chart_name: {{ .Variables.helm.chartName }}
+  {{end}}

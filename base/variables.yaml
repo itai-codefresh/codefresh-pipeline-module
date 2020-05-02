@@ -1,0 +1,18 @@
+oc:
+  cluster:
+  namespace:
+git:
+  main:
+    repo:
+    revision:
+    provider:
+docker:
+  imageName:
+  tag:
+  file:
+  registry:
+helm:
+  chart:
+    name:
+    dir:
+

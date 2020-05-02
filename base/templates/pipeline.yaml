@@ -1,0 +1,9 @@
+version: '1.0'
+stages:
+  - setup
+  - build
+  - deploy
+steps:
+  {{ include "prepare.steps" }}
+  {{ include "build.steps" }}
+  {{ include "deploy.steps" }}
