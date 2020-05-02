@@ -1,5 +1,5 @@
-# Codefresh Pipeline Module
-Experimental Codefresh module that facilitates modularization and reuse of pipelines.
+# Codefresh Pipeline Modules
+Experimental Codefresh modules that facilitates modularization and reuse of pipelines.
 
 ## Features
 * pipeline templating
